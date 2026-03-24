@@ -1,0 +1,78 @@
+/* Layout Defaults */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.catalog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Controls Styling */
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+input, select, #clear-btn {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* THE GRID - Critical for side-by-side display */
+#product-grid {
+    display: grid;
+    /* Creates columns at least 250px wide, filling the row */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Product Card Styling */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures images don't stretch */
+    border-radius: 8px;
+}
+
+.buy-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #product-grid {
+        grid-template-columns: 1fr; /* Stacks vertically only on mobile */
+    }
+}
