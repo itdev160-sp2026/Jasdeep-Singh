@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 9: Contact Form Validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Activity 9: Contact Form Validation</h1>
+    <p>Please open the <strong>console </strong> to view the form submission data.</p>
+
+    <div class="form-container">
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <span class="error-message" id="nameError">Name is required.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="email@example.com">
+                <span class="error-message" id="emailError">Please enter a valid email.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Your message (min. 10 chars)"></textarea>
+                <span class="error-message" id="messageError">Message must be at least 10 characters.</span>
+            </div>
+
+            <button type="submit" id="submitBtn" disabled>Send Message</button>
+            <p id="formStatus"></p>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
